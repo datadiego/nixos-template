@@ -6,7 +6,7 @@
     ./bootloader.nix
     ./networking-basic.nix
     ./lang.nix
-    ./desktop.nix
+    ./desktop-i3.nix
     ./audio.nix
     ];
 
