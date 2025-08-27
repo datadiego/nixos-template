@@ -22,11 +22,12 @@
   };
 
   environment.systemPackages = with pkgs; [
+	nautilus
     home-manager
     wget
     firefox
     i3 i3blocks i3status dmenu xterm alacritty
-    git
+    git 
   ];
   programs.firefox.enable=true;
 
