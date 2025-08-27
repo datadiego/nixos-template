@@ -3,11 +3,11 @@
 {
   imports=[ 
     ./hardware-configuration.nix 
-    ./bootloader.nix
-    ./networking-basic.nix
-    ./lang.nix
-    ./desktop-i3.nix
-    ./audio.nix
+    ./modules/bootloader.nix
+    ./modules/networking-basic.nix
+    ./modules/lang.nix
+    ./modules/desktop-i3.nix
+    ./modules/audio.nix
     ];
 
   services.upower.enable = true;
