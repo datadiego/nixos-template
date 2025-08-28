@@ -52,8 +52,6 @@ programs.firefox = {
     userEmail = "juandiegomariscal@gmail.com";
 };
 
-
-
 # Configuración Codium
 programs.vscode = {
   enable = true;
@@ -92,7 +90,7 @@ programs.vscode = {
     ".config/i3blocks/config".source = dotfiles/i3blocks;
     ".config/i3blocks/scripts/server-check.sh".source = scripts/server-check.sh;
     ".config/i3blocks/scripts/bateria.sh".source = scripts/bateria.sh;
-    "/etc/ly/config.ini".source = dotfiles/ly;
+    ".config/picom/picom.conf".source = dotfiles/picom.conf;
   };
 
   
