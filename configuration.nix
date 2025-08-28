@@ -8,6 +8,7 @@
     ./modules/lang.nix
     ./modules/desktop-i3.nix
     ./modules/audio.nix
+    ./users/user-example.nix
     ];
 
   services.upower.enable = true;
@@ -15,11 +16,7 @@
   services.printing.enable=true;
   services.libinput.enable=true;
 
-  users.users.datadiego={
-    isNormalUser=true;
-    description="El usuario que administra el sistema";
-    extraGroups=[ "networkmanager" "wheel"];
-  };
+
 
   environment.systemPackages = with pkgs; [
 	nautilus
