@@ -10,7 +10,7 @@ in
   home.enableNixpkgsReleaseCheck = false;
   home.stateVersion = "24.11"; 
 
-# Paquetesf
+# Paquetes
   home.packages = [
     pkgs.xmlstarlet
 	  pkgs.feh
