@@ -3,6 +3,7 @@ HOME_PATH="$HOME/.config/home-manager/"
 
 sudo cp -r ./modules $NIXOS_PATH
 sudo cp -r ./users $NIXOS_PATH
+cp -r ./modules $HOME_PATH
 cp -r ./dotfiles $HOME_PATH
 cp -r ./scripts $HOME_PATH
 
