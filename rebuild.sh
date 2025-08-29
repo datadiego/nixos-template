@@ -10,6 +10,7 @@ sudo cp ./configuration.nix $NIXOS_PATH
 cp ./home.nix $HOME_PATH
 
 sudo nixos-rebuild switch
+home-manager switch
 
 git add .
 git commit -m "new gen"
