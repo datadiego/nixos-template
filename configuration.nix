@@ -17,7 +17,18 @@
   services.printing.enable=true;
   services.libinput.enable=true;
 
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.python312
+    pkgs.uv
+    pkgs.openssl
+    pkgs.libffi
+    pkgs.sqlite
+  ];
 
+  shellHook = ''
+    export UV_SYSTEM_PYTHON=1
+  '';
 
   environment.systemPackages = with pkgs; [
 	  nautilus 
