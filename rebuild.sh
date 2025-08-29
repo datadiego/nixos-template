@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
 SRC_NIX="./configuration.nix"
 DST_NIX="/etc/nixos/configuration.nix"
 
