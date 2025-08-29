@@ -18,8 +18,8 @@ else
 fi
 
 sudo cp configuration.nix /etc/nixos/configuration.nix
-sudo cp -r /modules /etc/nixos/
-sudo cp -r /users /etc/nixos/
+sudo cp -r ./modules /etc/nixos/
+sudo cp -r ./users /etc/nixos/
 
 cp home.nix ~/.config/home-manager/home.nix
 cp -r dotfiles ~/.config/home-manager/
