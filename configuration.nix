@@ -25,7 +25,7 @@
     home-manager
     wget
     firefox
-    i3 i3blocks i3status dmenu xterm alacritty
+    i3 i3blocks i3status dmenu xterm alacritty picom
     git 
   ];
   programs.firefox.enable=true;

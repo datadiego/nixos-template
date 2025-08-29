@@ -5,6 +5,9 @@ check2=$(git diff ./home.nix ~/.config/home-manager/home.nix)
 if [ -n "$check1" ]; then
   echo -e "🚨 El archivo ./configuration.nix tiene diferencias con /etc/nixos/configuration.nix"
   git diff ./configuration.nix /etc/nixos/configuration.nix
+  sudo cp configuration.nix /etc/nixos/configuration.nix
+sudo cp -r ./modules /etc/nixos/
+sudo cp -r ./users /etc/nixos/
 else
   echo -e "✅ El archivo /etc/nixos/configuration.nix está actualizado respecto a ./configuration.nix"
 fi
@@ -16,10 +19,6 @@ if [ -n "$check2" ]; then
 else
   echo -e "✅ El archivo ~/.config/home-manager/home.nix está actualizado respecto a ./home.nix"
 fi
-
-sudo cp configuration.nix /etc/nixos/configuration.nix
-sudo cp -r ./modules /etc/nixos/
-sudo cp -r ./users /etc/nixos/
 
 cp home.nix ~/.config/home-manager/home.nix
 cp -r dotfiles ~/.config/home-manager/
