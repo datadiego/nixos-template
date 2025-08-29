@@ -10,7 +10,7 @@ in
   home.enableNixpkgsReleaseCheck = false;
   home.stateVersion = "24.11"; 
 
-# Paquetes
+# Paquetesf
   home.packages = [
     pkgs.xmlstarlet
 	  pkgs.feh
@@ -51,6 +51,7 @@ programs.firefox = {
     userName = "datadiego";
     userEmail = "juandiegomariscal@gmail.com";
 };
+nixpkgs.config.allowUnfree=true;
 
 # Configuración Codium
 programs.vscode = {
@@ -66,6 +67,8 @@ programs.vscode = {
     "editor.tabSize" = 2;
     "editor.formatOnSave"= true;
     "workbench.sideBar.location"= "right";
+    "explorer.confirmDelete"= true:
+
   };
 
 # Extensiones
@@ -76,6 +79,7 @@ programs.vscode = {
     mechatroner.rainbow-csv
     tomoki1207.pdf
     dracula-theme.theme-dracula
+    github.copilot-chat
   ];
 };
 
