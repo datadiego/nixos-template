@@ -6,8 +6,10 @@ if [ -n "$check1" ]; then
   echo -e "🚨 El archivo ./configuration.nix tiene diferencias con /etc/nixos/configuration.nix"
   git diff ./configuration.nix /etc/nixos/configuration.nix
   sudo cp configuration.nix /etc/nixos/configuration.nix
-sudo cp -r ./modules /etc/nixos/
-sudo cp -r ./users /etc/nixos/
+  sudo cp -r ./modules /etc/nixos/
+  sudo cp -r ./users /etc/nixos/
+  sudo nixos-rebuild switch
+  
 else
   echo -e "✅ El archivo /etc/nixos/configuration.nix está actualizado respecto a ./configuration.nix"
 fi
@@ -16,16 +18,17 @@ fi
 if [ -n "$check2" ]; then
   echo -e "🚨 El archivo ./home.nix tiene diferencias con ~/.config/home-manager/home.nix"
   git diff ./home.nix ~/.config/home-manager/home.nix
+  cp home.nix ~/.config/home-manager/home.nix
+  cp -r dotfiles ~/.config/home-manager/
+  cp -r scripts ~/.config/home-manager/
+  sudo home-manager switch
+  
 else
   echo -e "✅ El archivo ~/.config/home-manager/home.nix está actualizado respecto a ./home.nix"
 fi
 
-cp home.nix ~/.config/home-manager/home.nix
-cp -r dotfiles ~/.config/home-manager/
-cp -r scripts ~/.config/home-manager/
 
-sudo nixos-rebuild switch
-sudo home-manager switch
+
 
 git add .
 git commit -m "new generation"
