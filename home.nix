@@ -67,7 +67,7 @@ programs.vscode = {
     "editor.tabSize" = 2;
     "editor.formatOnSave"= true;
     "workbench.sideBar.location"= "right";
-    "explorer.confirmDelete"= true:
+    "explorer.confirmDelete"= true;
 
   };
 
