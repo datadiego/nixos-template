@@ -39,19 +39,15 @@ compare_and_copy "$SRC_NIX" "$DST_NIX" changed_nixos
 compare_and_copy "$MODULES_DIR" "$NIXOS_DIR/modules" changed_nixos
 compare_and_copy "$USERS_DIR" "$NIXOS_DIR/users" changed_nixos
 
-if $changed_nixos; then
-  echo -e "🔧 Aplicando cambios de NixOS..."
-  sudo nixos-rebuild switch
-fi
+echo -e "🔧 Aplicando cambios de NixOS..."
+sudo nixos-rebuild switch
 
 compare_and_copy "$SRC_HOME" "$DST_HOME" changed_home
 compare_and_copy "$DOTFILES_DIR" "$HOME_MANAGER_DIR/dotfiles" changed_home
 compare_and_copy "$SCRIPTS_DIR" "$HOME_MANAGER_DIR/scripts" changed_home
 
-if $changed_home; then
-  echo -e "🔧 Aplicando cambios de Home Manager..."
-  home-manager switch
-fi
+echo -e "🔧 Aplicando cambios de Home Manager..."
+home-manager switch
 
 if ! git diff --quiet || ! git diff --cached --quiet; then
   git add .
