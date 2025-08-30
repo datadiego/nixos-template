@@ -32,7 +32,8 @@ MODEL=$(cat /sys/class/dmi/id/product_name)
 
 CONFIG_FILE="./configuration.nix"
 
-git diff $CONFIG_FILE $NIXOS_PATH$CONFIG_FILE
+git diff
+# git diff $CONFIG_FILE $NIXOS_PATH$CONFIG_FILE
 
 if [[ "$MODEL" == "20AWS0RM00" ]]; then
   echo "Aplicando configuración para thinkpad t440p"
