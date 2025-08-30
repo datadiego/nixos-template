@@ -52,7 +52,7 @@ cp ./home.nix "$HOME_PATH"
 sudo nixos-rebuild switch
 home-manager switch
 
-git diff $CONFIG_FILE
+git diff 
 
 git add .
 git commit -m "new gen"
