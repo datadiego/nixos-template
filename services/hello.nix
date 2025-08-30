@@ -4,7 +4,7 @@
   systemd.services.hello-service = {
     description = "Run hello.sh periodically";
     serviceConfig = {
-      ExecStart = "/etc/nixos/scripts/hello.sh";
+      ExecStart = "/home/datadiego/nixos-template/scripts/hello.sh";
       #Restart = "always";
     };
   };
