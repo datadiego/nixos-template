@@ -6,7 +6,7 @@
     wantedBy = [ "multi-user.target" ];
     # ...existing code...
     serviceConfig = {
-      ExecStart = "${pkgs.bash}/bin/bash -c \"date >> /tmp/date\"";
+      ExecStart = "${pkgs.bash}/bin/bash date >> /tmp/date";
       Restart = "always";
       User = "root";
     };
