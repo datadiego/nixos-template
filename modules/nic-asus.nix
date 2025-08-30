@@ -11,10 +11,11 @@
     };
 
     "10-custom-wlan0" = {
-      matchConfig.MACAddress = "70:66:55:cf:27:8f";
+      matchConfig.MACAddress = "9e:6d:f1:bd:1a:1c";
       linkConfig = {
         Name = "wlan0";
         MACAddress = "BA:DC:AF:E1:33:70";
+
 
       };
     };
