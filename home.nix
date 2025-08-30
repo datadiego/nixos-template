@@ -12,7 +12,6 @@ in
   
 # Paquetes
   home.packages = [
-    
     pkgs.xmlstarlet
 	  pkgs.feh
   	pkgs.xclip
