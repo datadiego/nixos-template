@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  systemd.services.mi-servicio = {
+  systemd.services.hello = {
     description = "Test de servicios";
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
