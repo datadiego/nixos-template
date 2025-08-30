@@ -1,13 +1,12 @@
 { config, pkgs, ... }:
 
 let
-  helloScript = pkgs.writeShellScript "/home/datadiego/nixos-template/scripts/hello.sh" ''
-    echo "Hello from systemd service at $(date)" >> /tmp/hello.log
+  helloScript = pkgs.writeShellScript "hello.sh" ''
+    date >> /tmp/hello.log
   '';
 in
 {
   systemd.services.hello-service = {
-    enable=true;
     description = "Run hello.sh periodically";
     serviceConfig = {
       ExecStart = "${helloScript}";
