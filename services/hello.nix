@@ -1,10 +1,15 @@
 { config, pkgs, ... }:
 
+let
+  helloScript = pkgs.writeShellScript "hello.sh" ''
+    echo "Hello from systemd service at $(date)" >> /tmp/hello.log
+  '';
+in
 {
   systemd.services.hello-service = {
     description = "Run hello.sh periodically";
     serviceConfig = {
-      ExecStart = "/home/datadiego/nixos-template/scripts/hello.sh";
+      ExecStart = "${helloScript}";
       #Restart = "always";
     };
   };
@@ -13,8 +18,8 @@
     description = "Timer for hello-service";
     wantedBy = [ "timers.target" ];
     timerConfig = {
-      OnBootSec = "5min";         # Espera 5 minutos después de arrancar
-      OnUnitActiveSec = "10min"; # Se ejecuta cada 10 minutos
+      OnBootSec = "5min";
+      OnUnitActiveSec = "10min";
       Unit = "hello-service.service";
     };
   };
