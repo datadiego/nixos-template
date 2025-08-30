@@ -21,6 +21,7 @@
 
   #webapp
   pkgs.burpsuite
+  pkgs.caido
   pkgs.dirb
   pkgs.gobuster
   pkgs.whatweb
