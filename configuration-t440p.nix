@@ -22,10 +22,8 @@
 
   environment.systemPackages = with pkgs; [
 	  nautilus
-    dmidecode
     brightnessctl
     home-manager
-    wget
     firefox
     i3 i3blocks i3status dmenu xterm alacritty picom
     git
