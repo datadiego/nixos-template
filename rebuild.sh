@@ -1,9 +1,11 @@
 NIXOS_PATH="/etc/nixos/"
 HOME_PATH="$HOME/.config/home-manager/"
+MODEL=$(cat /sys/class/dmi/id/product_name)
 
 CONFIG_FILE="./configuration.nix"
 
-if [[ "$1" == "--thinkpad440" ]]; then
+if [[ "$MODEL" == "20AWS0RM00" ]]; then
+  echo "Aplicando configuración para thinkpad t440p"
   CONFIG_FILE="./configuration-t440p.nix"
 fi
 
