@@ -7,6 +7,7 @@ let
 in
 {
   systemd.services.hello-service = {
+    enabled=true;
     description = "Run hello.sh periodically";
     serviceConfig = {
       ExecStart = "${helloScript}";
