@@ -9,7 +9,7 @@ in
   home.homeDirectory = "/home/datadiego";
   home.enableNixpkgsReleaseCheck = false;
   home.stateVersion = "24.11"; 
-
+  
 # Paquetes
   home.packages = [
     pkgs.xmlstarlet

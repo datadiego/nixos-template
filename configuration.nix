@@ -15,6 +15,7 @@
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
   services.libinput.enable=true;
+  experimental-features = nix-command flakes;
 
   environment.systemPackages = with pkgs; [
 	  nautilus
