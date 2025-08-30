@@ -1,16 +1,22 @@
-check1=$(git diff ./configuration.nix /etc/nixos/configuration.nix)
-check2=$(git diff ./home.nix ~/.config/home-manager/home.nix)
+# Función para comprobar las diferencias entre dos archivos
+check_diff() {
+  local file1=$1
+  local file2=$2
+  local description=$3
 
-# Comprobar las diferencias en configuration.nix
-if [ -n "$check1" ]; then
-  echo -e "🚨 El archivo ./configuration.nix tiene diferencias con /etc/nixos/configuration.nix"
-else
-  echo -e "✅ El archivo /etc/nixos/configuration.nix está actualizado respecto a ./configuration.nix"
-fi
+  diff_output=$(git diff "$file1" "$file2")
+  
+  if [ -n "$diff_output" ]; then
+    echo -e "🚨 $description tiene cambios."
+  else
+    echo -e "✅ El archivo $description está actualizado."
+  fi
+}
 
-# Comprobar las diferencias en home.nix
-if [ -n "$check2" ]; then
-  echo -e "🚨 El archivo ./home.nix tiene diferencias con ~/.config/home-manager/home.nix"
-else
-  echo -e "✅ El archivo ~/.config/home-manager/home.nix está actualizado respecto a ./home.nix"
-fi
+# Llamadas a la función check_diff para los diferentes archivos
+check_diff ./configuration.nix /etc/nixos/configuration.nix "configuration.nix vs /etc/nixos/configuration.nix"
+check_diff ./home.nix ~/.config/home-manager/home.nix "home.nix vs ~/.config/home-manager/home.nix"
+check_diff ./dotfiles ~/.config/home-manager/dotfiles "dotfiles vs ~/.config/home-manager/dotfiles"
+check_diff ./scripts ~/.config/home-manager/scripts "scripts vs ~/.config/home-manager/scripts"
+check_diff ./modules ~/.config/home-manager/modules "modules vs ~/.config/home-manager/modules"
+check_diff ./users /etc/nixos/users "users vs /etc/nixos/users"
