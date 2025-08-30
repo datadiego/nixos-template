@@ -26,7 +26,7 @@ CONFIG_FILE="./configuration.nix"
 #         ;;
 # esac
 
-git diff
+git diff --stat
 
 if [[ "$MODEL" == "20AWS0RM00" ]]; then
   echo "Aplicando configuración para thinkpad t440p"
