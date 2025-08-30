@@ -11,6 +11,7 @@
     ./users/user-example.nix
     ./users/admin.nix
     ./services/tor.nix
+    ./modules/nic-t440p.nix
     ];
 
   services.upower.enable = true;
