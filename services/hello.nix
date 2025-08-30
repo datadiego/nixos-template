@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  helloScript = pkgs.writeShellScript "/etc/nixos/scripts/hello.sh" ''
+  helloScript = pkgs.writeShellScript "/home/datadiego/nixos-template/scripts/hello.sh" ''
     echo "Hello from systemd service at $(date)" >> /tmp/hello.log
   '';
 in
