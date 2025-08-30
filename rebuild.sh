@@ -32,6 +32,7 @@ MODEL=$(cat /sys/class/dmi/id/product_name)
 
 CONFIG_FILE="./configuration.nix"
 
+git diff $CONFIG_FILE $NIXOS_PATH$CONFIG_FILE
 
 if [[ "$MODEL" == "20AWS0RM00" ]]; then
   echo "Aplicando configuración para thinkpad t440p"
@@ -52,7 +53,6 @@ cp ./home.nix "$HOME_PATH"
 sudo nixos-rebuild switch
 home-manager switch
 
-git diff 
 
 git add .
 git commit -m "new gen"
