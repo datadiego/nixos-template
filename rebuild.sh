@@ -14,7 +14,7 @@ cp -r ./modules "$HOME_PATH"
 cp -r ./dotfiles "$HOME_PATH"
 cp -r ./scripts "$HOME_PATH"
 
-sudo cp "$CONFIG_FILE" "$NIXOS_PATH"
+sudo cp "$CONFIG_FILE" "$NIXOS_PATH/configuration.nix"
 
 cp ./home.nix "$HOME_PATH"
 
