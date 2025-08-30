@@ -4,27 +4,27 @@ MODEL=$(cat /sys/class/dmi/id/product_name)
 
 CONFIG_FILE="./configuration.nix"
 
-./check.sh
+# ./check.sh
 
-echo "¿Quieres continuar?"
-read respuesta
+# echo "¿Quieres continuar?"
+# read respuesta
 
-# Convertir la respuesta a minúsculas para manejar todas las combinaciones
-respuesta=$(echo "$respuesta" | tr '[:upper:]' '[:lower:]')
+# # Convertir la respuesta a minúsculas para manejar todas las combinaciones
+# respuesta=$(echo "$respuesta" | tr '[:upper:]' '[:lower:]')
 
-case "$respuesta" in
-    s|y|yes)
-        echo "Comenzando"
-        ;;
-    n|no)
-        echo "Operación cancelada."
-        exit
-        ;;
-    *)
-        echo "Respuesta no válida. Por favor, responde con S/N, Y/N o yes/no."
-        exit
-        ;;
-esac
+# case "$respuesta" in
+#     s|y|yes)
+#         echo "Comenzando"
+#         ;;
+#     n|no)
+#         echo "Operación cancelada."
+#         exit
+#         ;;
+#     *)
+#         echo "Respuesta no válida. Por favor, responde con S/N, Y/N o yes/no."
+#         exit
+#         ;;
+# esac
 
 if [[ "$MODEL" == "20AWS0RM00" ]]; then
   echo "Aplicando configuración para thinkpad t440p"
