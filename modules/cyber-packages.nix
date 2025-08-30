@@ -70,6 +70,5 @@
   pkgs.radare2
   pkgs.binwalk
   pkgs.strace
-  pkgs.objdump
 
 ]
