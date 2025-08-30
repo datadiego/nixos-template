@@ -19,10 +19,6 @@ in
     script = ''
       echo "Starting my custom service"
     '';
-
-    install = {
-      wantedBy = [ "multi-user.target" ];
-    };
   };
 
   environment.systemPackages = [ pkgs.bash ];
