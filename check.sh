@@ -20,3 +20,4 @@ check_diff ./dotfiles ~/.config/home-manager/dotfiles "dotfiles VS ~/.config/hom
 check_diff ./scripts ~/.config/home-manager/scripts "scripts VS ~/.config/home-manager/scripts"
 check_diff ./modules ~/.config/home-manager/modules "modules VS ~/.config/home-manager/modules"
 check_diff ./users /etc/nixos/users "users VS /etc/nixos/users"
+
