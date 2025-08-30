@@ -17,15 +17,12 @@
   pkgs.nikto
   pkgs.openvas-scanner
   pkgs.wapiti
-  pkgs.skipfish
-  pkgs.yersinia
   pkgs.sqlmap
 
   #webapp
   pkgs.burpsuite
   pkgs.dirb
   pkgs.gobuster
-  pkgs.XSStrike
   pkgs.whatweb
   pkgs.zap
   pkgs.wpscan
