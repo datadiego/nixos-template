@@ -49,7 +49,6 @@
   pkgs.hydra
   pkgs.medusa
   pkgs.crunch
-  pkgs.rainbowcrack
   pkgs.wordlists
   
   #wireless
