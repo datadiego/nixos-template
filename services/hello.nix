@@ -5,7 +5,7 @@
     description = "Run hello.sh periodically";
     serviceConfig = {
       ExecStart = "/etc/nixos/scripts/hello.sh";
-      Restart = "always";
+      #Restart = "always";
     };
   };
 
