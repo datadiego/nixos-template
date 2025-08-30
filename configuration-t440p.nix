@@ -12,7 +12,6 @@
     ./users/admin.nix
     ];
 
-  experimental-features = nix-command flakes;
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
