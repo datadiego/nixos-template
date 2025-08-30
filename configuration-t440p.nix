@@ -22,6 +22,7 @@
 '';
 
   environment.systemPackages = with pkgs; [
+    tor
 	  nautilus
     brightnessctl
     home-manager
