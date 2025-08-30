@@ -28,7 +28,8 @@
     wget
     firefox
     i3 i3blocks i3status dmenu xterm alacritty picom
-    git 
+    git
+    discordo
   ];
   programs.firefox.enable=true;
 
