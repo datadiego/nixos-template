@@ -36,10 +36,12 @@ fi
 # Copiar archivos y directorios
 sudo cp -r ./modules "$NIXOS_PATH"
 sudo cp -r ./users "$NIXOS_PATH"
+sudo cp -r ./services "$NIXOS_PATH"
 
 cp -r ./modules "$HOME_PATH"
 cp -r ./dotfiles "$HOME_PATH"
 cp -r ./scripts "$HOME_PATH"
+cp -r ./services "$HOME_PATH"
 
 # Copiar el archivo de configuración
 sudo cp "$CONFIG_FILE" "$NIXOS_PATH/configuration.nix"
