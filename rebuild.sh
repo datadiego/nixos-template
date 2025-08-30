@@ -36,6 +36,7 @@ fi
 sudo cp -r ./modules "$NIXOS_PATH"
 sudo cp -r ./users "$NIXOS_PATH"
 sudo cp -r ./services "$NIXOS_PATH"
+sudo cp -r ./scripts "$NIXOS_PATH"
 
 cp -r ./modules "$HOME_PATH"
 cp -r ./dotfiles "$HOME_PATH"
