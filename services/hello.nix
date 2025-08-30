@@ -13,12 +13,8 @@ in
     wantedBy = [ "multi-user.target" ];
     serviceConfig = myService.serviceConfig;
     after = [ "network.target" ];
-
     path = [ pkgs.bash ];
-
-    script = ''
-      echo "Starting my custom service"
-    '';
+    # script removed to avoid ExecStart conflict
   };
 
   environment.systemPackages = [ pkgs.bash ];
