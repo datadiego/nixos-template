@@ -16,7 +16,6 @@
   #vuln-analysis
   pkgs.nikto
   pkgs.openvas-scanner
-  pkgs.nessus
   pkgs.wapiti
   pkgs.skipfish
   pkgs.yersinia
