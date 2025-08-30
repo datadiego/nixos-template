@@ -1,15 +1,33 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
-{
-  systemd.services.hello = {
-    description = "Test de servicios";
-    wantedBy = [ "multi-user.target" ];
-    # ...existing code...
+let
+  myService = {
     serviceConfig = {
-      ExecStart = "${pkgs.bash}/bin/bash date >> /tmp/date";
-      Restart = "always";
-      User = "root";
+      ExecStart = "${pkgs.bash}/bin/bash /etc/nixos/scripts/hello.sh";
     };
-# ...existing code...
   };
+in
+{
+  systemd.services.myCustomService = {
+    description = "My Custom Service";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = myService.serviceConfig;
+    after = [ "network.target" ];
+
+    path = [ pkgs.bash ];
+
+    script = ''
+      echo "Starting my custom service"
+    '';
+
+    install = {
+      wantedBy = [ "multi-user.target" ];
+    };
+  };
+
+  environment.systemPackages = [ pkgs.bash ];
+
+  system.activationScripts.myCustomScript = ''
+    echo "Hello from my custom service!" > /tmp/hello
+  '';
 }
