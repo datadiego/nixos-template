@@ -12,4 +12,7 @@
       linkConfig.Name = "wlan0";
     };
   };
+
+  networking.interfaces.eth0.macAddress = "DE:AD:DE:AD:DE:AD";
+  networking.interfaces.wlan0.macAddress ="0F:F1:C1:A7:13:37";
 }
