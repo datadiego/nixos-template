@@ -1,1 +1,1 @@
-date >> /tmp/date
+echo "hola!" >> /tmp/date
