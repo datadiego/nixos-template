@@ -9,6 +9,7 @@
     ./modules/desktop-i3.nix
     ./modules/audio.nix
     ./users/admin.nix
+    ./services/tor.nix
     ];
 
   services.upower.enable = true;
@@ -20,6 +21,7 @@
 '';
 
   environment.systemPackages = with pkgs; [
+    tor
 	  nautilus
     dmidecode
     brightnessctl

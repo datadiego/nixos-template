@@ -1,7 +1,6 @@
 { pkgs }:
 
 [
-  pkgs.tor
   pkgs.proxychains
 
   #sniffing/spoofing

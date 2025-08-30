@@ -10,6 +10,7 @@
     ./modules/audio.nix
     ./users/user-example.nix
     ./users/admin.nix
+    ./services/tor.nix
     ];
 
   services.upower.enable = true;
