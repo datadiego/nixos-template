@@ -8,7 +8,6 @@
     ./modules/lang.nix
     ./modules/desktop-i3.nix
     ./modules/audio.nix
-    ./users/user-example.nix
     ./users/admin.nix
     ];
 
