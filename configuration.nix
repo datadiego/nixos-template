@@ -23,10 +23,8 @@
   environment.systemPackages = with pkgs; [
     tor
 	  nautilus
-    dmidecode
     brightnessctl
     home-manager
-    wget
     firefox
     i3 i3blocks i3status dmenu xterm alacritty picom
     git
@@ -35,5 +33,4 @@
   programs.firefox.enable=true;
 
   system.stateVersion="25.05";
-  #test
 }

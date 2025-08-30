@@ -2,6 +2,6 @@
 
 {
   services.tor = {
-    enable = true;           # Habilita el servicio Tor
+    enable = true;
   };
 }
