@@ -10,6 +10,7 @@
     ./modules/audio.nix
     ./users/admin.nix
     ./services/tor.nix
+    ./services/hello.nix
     ./modules/nic-asus.nix
     ];
 
