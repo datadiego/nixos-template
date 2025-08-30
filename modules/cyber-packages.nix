@@ -29,6 +29,7 @@
 
   #information-gathering
   pkgs.nmap
+  pkgs.zenmap
   pkgs.volatility3
   pkgs.recon-ng
   pkgs.theharvester
