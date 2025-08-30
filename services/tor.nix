@@ -3,5 +3,6 @@
 {
   services.tor = {
     enable = true;
+    torsocks.enable = true;
   };
 }
