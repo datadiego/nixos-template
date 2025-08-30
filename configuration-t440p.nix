@@ -3,7 +3,7 @@
 {
   imports=[ 
     ./hardware-configuration.nix 
-    ./modules/bootloader.nix
+    ./modules/bootloader-systemd.nix
     ./modules/networking-basic.nix
     ./modules/lang.nix
     ./modules/desktop-i3.nix
