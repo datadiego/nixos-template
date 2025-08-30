@@ -79,7 +79,7 @@ programs.vscode = {
     mechatroner.rainbow-csv
     tomoki1207.pdf
     dracula-theme.theme-dracula
-    github.copilot-chat
+    #github.copilot-chat
   ];
 };
 
