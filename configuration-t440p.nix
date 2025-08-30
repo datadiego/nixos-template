@@ -11,12 +11,15 @@
     ./users/user-example.nix
     ./users/admin.nix
     ];
-    
+
   experimental-features = nix-command flakes;
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
   services.libinput.enable=true;
+  nix.extraOptions = ''
+  experimental-features = nix-command flakes
+'';
 
   environment.systemPackages = with pkgs; [
 	  nautilus
