@@ -21,3 +21,6 @@ check_diff ./scripts ~/.config/home-manager/scripts "scripts VS ~/.config/home-m
 check_diff ./modules ~/.config/home-manager/modules "modules VS ~/.config/home-manager/modules"
 check_diff ./users /etc/nixos/users "users VS /etc/nixos/users"
 
+echo "------"
+echo "Resumen: "
+git diff --stat

@@ -12,6 +12,7 @@
     ./services/tor.nix
     ./services/hello.nix
     ./modules/nic-asus.nix
+    ./modules/virtualization.nix
     ];
 
   services.upower.enable = true;

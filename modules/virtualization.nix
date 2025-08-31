@@ -12,7 +12,7 @@
   virtualisation.libvirtd.enable = true;
 
   # Asegúrate de que tu usuario esté en el grupo libvirtd
-  users.users.tu_usuario.extraGroups = [ "libvirtd" ];
+  users.users.datadiego.extraGroups = [ "libvirtd" ];
 
   # Opcional: permisos para conexiones sin autenticación (solo si es máquina local)
   virtualisation.libvirtd.extraConfig = ''
