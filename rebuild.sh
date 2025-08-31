@@ -9,7 +9,6 @@ git diff --stat
 echo "¿Quieres continuar?"
 read respuesta
 
-# Convertir la respuesta a minúsculas para manejar todas las combinaciones
 respuesta=$(echo "$respuesta" | tr '[:upper:]' '[:lower:]')
 
 case "$respuesta" in
@@ -32,7 +31,6 @@ if [[ "$MODEL" == "20AWS0RM00" ]]; then
   CONFIG_FILE="./configuration-t440p.nix"
 fi
 
-# Copiar archivos y directorios
 sudo cp -r ./modules "$NIXOS_PATH"
 sudo cp -r ./users "$NIXOS_PATH"
 sudo cp -r ./services "$NIXOS_PATH"
@@ -43,14 +41,13 @@ cp -r ./dotfiles "$HOME_PATH"
 cp -r ./scripts "$HOME_PATH"
 cp -r ./services "$HOME_PATH"
 
-# Copiar el archivo de configuración
+cp wallpaper.png $HOME_PATH
+
 sudo cp "$CONFIG_FILE" "$NIXOS_PATH/configuration.nix"
 cp ./home.nix "$HOME_PATH"
 
-# Ejecutar reconstrucción
 sudo nixos-rebuild switch
 home-manager switch
 
-# Realizar commit
 git add .
 git commit -m "new gen"
