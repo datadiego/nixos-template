@@ -9,23 +9,15 @@
     bridge-utils
   ];
 
-  virtualisation.libvirtd = {
-    enable = true;
-    # Configuración extra para permisos de socket
-    extraConfig = ''
-      unix_sock_group = "libvirt"
-      unix_sock_ro_perms = "0777"
-      unix_sock_rw_perms = "0770"
-    '';
-  };
+  virtualisation.libvirtd.enable = true;
 
-  # Asegúrate de que tu usuario esté en los grupos correctos
-  users.users.datadiego.extraGroups = [ "libvirtd" "libvirt" "kvm" ];
+  # Asegúrate de que tu usuario esté en el grupo libvirtd
+  users.users.datadiego.extraGroups = [ "libvirtd" ];
 
-  # Asegura que el grupo kvm exista (NixOS lo crea automáticamente si usas KVM)
-  # Si tienes CPU Intel o AMD, asegúrate de que el módulo esté cargado:
-  boot.kernelModules = [ "kvm-intel" "kvm-amd" ];
-
-  # Opcional: permite la gestión de redes por libvirt
-  virtualisation.libvirtd.qemuPackage = pkgs.qemu_kvm;
+  # Opcional: permisos para conexiones sin autenticación (solo si es máquina local)
+  virtualisation.libvirtd.extraConfig = ''
+    unix_sock_group = "libvirtd"
+    unix_sock_ro_perms = "0770"
+    unix_sock_rw_perms = "0770"
+  '';
 }
