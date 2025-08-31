@@ -58,18 +58,23 @@ programs.vscode = {
   enable = true;
   package = pkgs.vscodium;
 
-  profiles.default.userSettings = {
-    "workbench.colorTheme" = "Dracula Theme";
-    "files.autoSave" = "afterDelay";
-    "files.autoSaveDelay" = 1000;
-    "editor.fontFamily" = "Fira Code";
-    "editor.minimap.enabled" = false;
-    "editor.tabSize" = 2;
-    "editor.formatOnSave"= true;
-    "workbench.sideBar.location"= "right";
-    "explorer.confirmDelete"= true;
-
+profiles.default.userSettings = {
+  "workbench.colorTheme" = "Dracula Theme";
+  "files.autoSave" = "afterDelay";
+  "files.autoSaveDelay" = 1000;
+  "editor.fontFamily" = "Fira Code";
+  "editor.minimap.enabled" = false;
+  "editor.tabSize" = 2;
+  "editor.formatOnSave"= true;
+  "workbench.sideBar.location"= "right";
+  "explorer.confirmDelete"= true;
+  "github.copilot.enable" = {
+    "*" = true;
   };
+  "github.copilot.inlineSuggest.enable" = true;
+  "github.copilot.editor.enableAutoCompletions" = true;
+};
+
 
 # Extensiones
   profiles.default.extensions = with pkgs.vscode-extensions; [
@@ -77,7 +82,7 @@ programs.vscode = {
     ms-python.python
     ritwickdey.liveserver
     mechatroner.rainbow-csv
-    tomoki1207.pdf
+    tomoki1207.pdf>
     dracula-theme.theme-dracula
     github.copilot-chat
   ];
