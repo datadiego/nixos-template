@@ -82,7 +82,7 @@ profiles.default.userSettings = {
     ms-python.python
     ritwickdey.liveserver
     mechatroner.rainbow-csv
-    tomoki1207.pdf>
+    tomoki1207.pdf
     dracula-theme.theme-dracula
     github.copilot-chat
   ];
