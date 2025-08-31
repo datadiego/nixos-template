@@ -32,6 +32,7 @@ in
   	pkgs.bitwarden-desktop
     pkgs.python3
     pkgs.uv
+    pkgs.xev
   ] ++ cyberPackages;
 
 programs.firefox = {
