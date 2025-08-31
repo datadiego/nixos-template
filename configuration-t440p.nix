@@ -12,6 +12,7 @@
     ./users/admin.nix
     ./services/tor.nix
     ./modules/nic-t440p.nix
+    ./services/hello.nix
     ];
 
   services.upower.enable = true;
