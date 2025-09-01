@@ -47,7 +47,6 @@ programs.firefox = {
       ];
     };
   };
-services.gnome.gnome-keyring.enable = true;
 
 # Configuración Git
   programs.git = {
