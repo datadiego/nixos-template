@@ -122,7 +122,6 @@ profiles.default.userSettings = {
 
   services.gns3-server = {
     enable = true;
-    auth.enable = false;  # o true si quieres requerir autenticación
     ubridge.enable = true;
     dynamips.enable = true;
     vpcs.enable = true;
