@@ -25,6 +25,7 @@
 
   environment.systemPackages = with pkgs; [
     tor
+    arandr
 	  nautilus
     brightnessctl
     home-manager
