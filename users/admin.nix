@@ -7,7 +7,7 @@
     users.users.datadiego = {
     isNormalUser = true;
     description = "El usuario que administra el sistema";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "ubridge" ];
   };
 
 }

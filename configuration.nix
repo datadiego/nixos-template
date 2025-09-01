@@ -29,13 +29,13 @@
   experimental-features = nix-command flakes
 '';
 services.gnome.gnome-keyring.enable = true;
-systemd.services.ubridge = {
-    serviceConfig = {
-      AmbientCapabilities = "CAP_NET_RAW";
-      CapabilityBoundingSet = "CAP_NET_RAW";
-      # También puedes agregar otras configuraciones necesarias
-    };
-  };
+# systemd.services.ubridge = {
+#     serviceConfig = {
+#       AmbientCapabilities = "CAP_NET_RAW";
+#       CapabilityBoundingSet = "CAP_NET_RAW";
+#       # También puedes agregar otras configuraciones necesarias
+#     };
+#   };
   environment.systemPackages = with pkgs; [
     pulseaudio
     arandr
