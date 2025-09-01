@@ -35,11 +35,6 @@ services.gnome.gnome-keyring.enable = true;
     i3 i3blocks i3status dmenu xterm alacritty picom
     git
     discordo
-    gns3-gui
-    gns3-server
-    dynamips
-    vpcs
-    ubridge
   ];
   programs.firefox.enable=true;
 
