@@ -106,7 +106,7 @@ profiles.default.userSettings = {
     ".config/i3blocks/scripts/server-check.sh".source = scripts/server-check.sh;
     ".config/i3blocks/scripts/bateria.sh".source = scripts/bateria.sh;
     ".config/picom/picom.conf".source = dotfiles/picom.conf;
-    ".config/virt-manager/virt-manager.conf".source = dotfiles/virt-manager.conf;
+    "/etc/libvirt/virt-manager.conf".source = dotfiles/virt-manager.conf;
   };
 
   
