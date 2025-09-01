@@ -37,15 +37,6 @@ in
     pkgs.gns3-server
   ] ++ cyberPackages;
 
-  services.gns3-server = {
-    enable = true;
-    auth.enable = false;  # o true si quieres requerir autenticación
-    ubridge.enable = true;
-    dynamips.enable = true;
-    vpcs.enable = true;
-  };
-
-
 programs.firefox = {
     enable = true;
     package = pkgs.firefox;
@@ -127,6 +118,14 @@ profiles.default.userSettings = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_STYLE_OVERRIDE = "fusion";
     MOZ_USE_XINPUT2 = "1";  # Para forzar el modo oscuro en Firefox
+  };
+
+  services.gns3-server = {
+    enable = true;
+    auth.enable = false;  # o true si quieres requerir autenticación
+    ubridge.enable = true;
+    dynamips.enable = true;
+    vpcs.enable = true;
   };
 
   programs.home-manager.enable = true;
