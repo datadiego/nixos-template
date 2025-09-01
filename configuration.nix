@@ -14,6 +14,7 @@
     ./modules/nic-asus.nix
     ./modules/virtualization.nix
     ];
+    
   security.wrappers.ubridge = {
     source = "${pkgs.ubridge}/bin/ubridge";
     owner = "root";
