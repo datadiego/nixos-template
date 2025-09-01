@@ -51,7 +51,9 @@ programs.firefox = {
     enable = true;
     userName = "datadiego";
     userEmail = "juandiegomariscal@gmail.com";
+    extraConfig.credential.helper = "manager";
 };
+
 nixpkgs.config.allowUnfree=true;
 
 # Configuración Codium
