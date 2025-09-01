@@ -44,7 +44,6 @@ in
     dynamips.enable = true;
     vpcs.enable = true;
   };
-}
 
 
 programs.firefox = {
