@@ -33,11 +33,7 @@ in
   	pkgs.bitwarden-desktop
     pkgs.python3
     pkgs.uv
-    pkgs.gns3-gui
-    pkgs.gns3-server
-    pkgs.dynamips
-    pkgs.vpcs
-    pkgs.ubridge
+
   ] ++ cyberPackages;
 
 programs.firefox = {

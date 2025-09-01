@@ -15,12 +15,6 @@
     ./modules/virtualization.nix
     ];
 
-  security.wrappers.ubridge = {
-    source = "${pkgs.ubridge}/bin/ubridge";
-    owner = "root";
-    group = "root";
-    permissions = "4755";
-  };
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
@@ -29,13 +23,7 @@
   experimental-features = nix-command flakes
 '';
 services.gnome.gnome-keyring.enable = true;
-# systemd.services.ubridge = {
-#     serviceConfig = {
-#       AmbientCapabilities = "CAP_NET_RAW";
-#       CapabilityBoundingSet = "CAP_NET_RAW";
-#       # También puedes agregar otras configuraciones necesarias
-#     };
-#   };
+
   environment.systemPackages = with pkgs; [
     pulseaudio
     arandr
@@ -47,6 +35,11 @@ services.gnome.gnome-keyring.enable = true;
     i3 i3blocks i3status dmenu xterm alacritty picom
     git
     discordo
+    gns3-gui
+    gns3-server
+    dynamips
+    vpcs
+    ubridge
   ];
   programs.firefox.enable=true;
 
