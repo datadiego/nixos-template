@@ -52,7 +52,7 @@ programs.firefox = {
     userName = "datadiego";
     userEmail = "juandiegomariscal@gmail.com";
     extraConfig.credential.helper = "manager";
-    extraConfig.credential."https://github.com".username="datadiego"
+    extraConfig.credential."https://github.com".username="datadiego";
 };
 
 nixpkgs.config.allowUnfree=true;
