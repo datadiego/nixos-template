@@ -35,6 +35,7 @@ in
     pkgs.uv
     pkgs.gns3-gui
     pkgs.gns3-server
+    pkgs.dynamips
   ] ++ cyberPackages;
 
 programs.firefox = {
@@ -118,13 +119,6 @@ profiles.default.userSettings = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_STYLE_OVERRIDE = "fusion";
     MOZ_USE_XINPUT2 = "1";  # Para forzar el modo oscuro en Firefox
-  };
-
-  services.gns3-server = {
-    enable = true;
-    # ubridge.enable = true;
-    dynamips.enable = true;
-    # vpcs.enable = true;
   };
 
   programs.home-manager.enable = true;
