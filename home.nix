@@ -33,8 +33,19 @@ in
   	pkgs.bitwarden-desktop
     pkgs.python3
     pkgs.uv
-    pkgs.gns3
+    pkgs.gns3-gui
+    pkgs.gns3-server
   ] ++ cyberPackages;
+
+  services.gns3-server = {
+    enable = true;
+    auth.enable = false;  # o true si quieres requerir autenticación
+    ubridge.enable = true;
+    dynamips.enable = true;
+    vpcs.enable = true;
+  };
+}
+
 
 programs.firefox = {
     enable = true;
