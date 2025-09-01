@@ -27,6 +27,7 @@ in
 	  pkgs.fira-code
 	  pkgs.git
 	  pkgs.gh
+    pkgs.git-credential-manager
   	pkgs.linode-cli
   	pkgs.bitwarden-cli
   	pkgs.bitwarden-desktop
