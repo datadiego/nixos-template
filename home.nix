@@ -37,6 +37,7 @@ in
     pkgs.gns3-server
     pkgs.dynamips
     pkgs.vpcs
+    pkgs.ubridge
   ] ++ cyberPackages;
 
 programs.firefox = {

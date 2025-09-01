@@ -14,7 +14,12 @@
     ./modules/nic-asus.nix
     ./modules/virtualization.nix
     ];
-
+  security.wrappers.ubridge = {
+    source = "${pkgs.ubridge}/bin/ubridge";
+    owner = "root";
+    group = "root";
+    permissions = "4755";
+  };
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
