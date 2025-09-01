@@ -5,6 +5,9 @@ let
   nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") { inherit pkgs; };
 in 
 {
+    imports = [
+    ./modules/proxychains-tor.nix
+  ];
   home.username = "datadiego";
   home.homeDirectory = "/home/datadiego";
   home.enableNixpkgsReleaseCheck = false;
