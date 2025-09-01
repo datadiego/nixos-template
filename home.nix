@@ -46,6 +46,8 @@ programs.firefox = {
       ];
     };
   };
+services.gnome.gnome-keyring.enable = true;
+
 # Configuración Git
   programs.git = {
     enable = true;
@@ -53,6 +55,7 @@ programs.firefox = {
     userEmail = "juandiegomariscal@gmail.com";
     extraConfig.credential.helper = "manager";
     extraConfig.credential."https://github.com".username="datadiego";
+    extraConfig.credential.credentialStore = "secretservice";
 };
 
 nixpkgs.config.allowUnfree=true;
