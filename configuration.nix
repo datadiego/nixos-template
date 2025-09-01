@@ -22,6 +22,7 @@
   nix.extraOptions = ''
   experimental-features = nix-command flakes
 '';
+services.gnome.gnome-keyring.enable = true;
 
   environment.systemPackages = with pkgs; [
     pulseaudio
