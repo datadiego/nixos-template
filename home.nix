@@ -107,7 +107,7 @@ profiles.default.userSettings = {
     ".config/i3blocks/scripts/bateria.sh".source = scripts/bateria.sh;
     ".config/picom/picom.conf".source = dotfiles/picom.conf;
     ".config/libvirt/virt-manager.conf".source = dotfiles/virt-manager.conf;
-    ".config/proxychains/proxychains.conf".source = dotfiles/proxychains.conf;
+    ".config/proxychains/proxychains4.conf".source = dotfiles/proxychains.conf;
   };
 
   
