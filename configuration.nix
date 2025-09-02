@@ -14,7 +14,8 @@
     ./modules/nic-asus.nix
     ./modules/virtualization.nix
     ];
-
+  
+  services.openvswitch.enable = true;
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
