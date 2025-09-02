@@ -14,8 +14,8 @@
     ./modules/nic-asus.nix
     ./modules/virtualization.nix
     ];
-  
-  services.openvswitch.enable = true;
+
+  # services.openvswitch.enable = true;
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
@@ -36,6 +36,8 @@ services.gnome.gnome-keyring.enable = true;
     i3 i3blocks i3status dmenu xterm alacritty picom
     git
     discordo
+    mininet
+    openvswitch
   ];
   programs.firefox.enable=true;
 
