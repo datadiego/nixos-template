@@ -5,9 +5,6 @@ let
   nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") { inherit pkgs; };
 in 
 {
-    imports = [
-    ./modules/proxychains-tor.nix
-  ];
   home.username = "datadiego";
   home.homeDirectory = "/home/datadiego";
   home.enableNixpkgsReleaseCheck = false;
@@ -49,7 +46,14 @@ programs.firefox = {
       ];
     };
   };
+  home.file.".proxychains/proxychains.conf".text = ''
+    strict_chain
+    proxy_dns
 
+    [ProxyList]
+    socks5 127.0.0.1 9050
+  '';
+  
 # Configuración Git
   programs.git = {
     enable = true;
