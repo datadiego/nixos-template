@@ -18,13 +18,15 @@
   # services.openvswitch.enable = true;
 
 
-  networking.vswitches.br0 = {
+ networking.vswitches.br0 = {
     enable = true;
     package = pkgs.openvswitch;
     interfaces = {
       # puedes añadir interfaces físicas aquí si quieres
     };
   };
+  services.openvswitch.enable = true;
+  
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
