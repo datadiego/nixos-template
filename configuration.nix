@@ -16,6 +16,7 @@
     ];
 
   # services.openvswitch.enable = true;
+  virtualisation.vswitch.package = pkgs.openvswitch;
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
