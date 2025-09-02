@@ -15,18 +15,6 @@
     ./modules/virtualization.nix
     ];
 
-  # services.openvswitch.enable = true;
-
-
- networking.vswitches.br0 = {
-    enable = true;
-    package = pkgs.openvswitch;
-    interfaces = {
-      # puedes añadir interfaces físicas aquí si quieres
-    };
-  };
-  services.openvswitch.enable = true;
-  
   services.upower.enable = true;
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
@@ -47,8 +35,6 @@ services.gnome.gnome-keyring.enable = true;
     i3 i3blocks i3status dmenu xterm alacritty picom
     git
     discordo
-    mininet
-    openvswitch
   ];
   programs.firefox.enable=true;
 
