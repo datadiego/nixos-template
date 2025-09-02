@@ -51,9 +51,9 @@ programs.firefox = {
     proxy_dns
 
     [ProxyList]
-    socks5 127.0.0.1 9050
+    socks5 127.0.0.1 9051
   '';
-  
+
 # Configuración Git
   programs.git = {
     enable = true;
