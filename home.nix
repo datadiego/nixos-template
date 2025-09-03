@@ -33,6 +33,7 @@ in
   	pkgs.bitwarden-desktop
     pkgs.python3
     pkgs.uv
+    pkgs.postgresql
   ] ++ cyberPackages;
 
 programs.firefox = {
@@ -116,7 +117,7 @@ profiles.default.userSettings = {
     GTK_THEME = "Adwaita-dark";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_STYLE_OVERRIDE = "fusion";
-    MOZ_USE_XINPUT2 = "1";  # Para forzar el modo oscuro en Firefox
+    MOZ_USE_XINPUT2 = "1";
   };
 
   programs.home-manager.enable = true;

@@ -19,11 +19,11 @@
   nixpkgs.config.allowUnfree=true;
   services.printing.enable=true;
   services.libinput.enable=true;
+  
   nix.extraOptions = ''
   experimental-features = nix-command flakes
-'';
-services.gnome.gnome-keyring.enable = true;
-
+  '';
+  services.gnome.gnome-keyring.enable = true;
   environment.systemPackages = with pkgs; [
     pulseaudio
     arandr
@@ -37,6 +37,5 @@ services.gnome.gnome-keyring.enable = true;
     discordo
   ];
   programs.firefox.enable=true;
-
   system.stateVersion="25.05";
 }
