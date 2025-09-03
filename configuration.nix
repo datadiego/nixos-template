@@ -37,5 +37,6 @@
     discordo
   ];
   programs.firefox.enable=true;
+  programs.wireshark.enable = true;
   system.stateVersion="25.05";
 }
