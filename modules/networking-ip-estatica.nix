@@ -12,7 +12,7 @@ networking.interfaces.lan0 = {
   } ];
 };
 
-networking.defaultGateway = "192.168.100.1";
+networking.defaultGateway = "192.168.0.1";
 networking.nameservers = ["1.1.1.1" "8.8.8.8"];
 
 services.udev.extraRules = ''
