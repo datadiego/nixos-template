@@ -35,6 +35,7 @@
     i3 i3blocks i3status dmenu xterm alacritty picom
     git
     discordo
+    screenkey
   ];
   programs.firefox.enable=true;
   programs.wireshark.enable = true;
