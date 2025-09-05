@@ -10,9 +10,6 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 #pantallazos
 bindsym Print exec gnome-screenshot
-bindsym Shift+Print exec gnome-screenshot -a
-bindsym Ctrl+Print exec gnome-screenshot -w
-
 
 # margen interior
 for_window [class="^.*$"] border pixel 1
