@@ -24,6 +24,9 @@
   experimental-features = nix-command flakes
   '';
   services.gnome.gnome-keyring.enable = true;
+
+  virtualisation.docker.enable = true;
+
   environment.systemPackages = with pkgs; [
     pulseaudio
     arandr
