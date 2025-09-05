@@ -36,6 +36,7 @@
     git
     discordo
     screenkey
+    gnome-screenshot
   ];
   programs.firefox.enable=true;
   programs.wireshark.enable = true;
