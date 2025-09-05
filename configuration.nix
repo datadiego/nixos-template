@@ -40,6 +40,7 @@
     discordo
     screenkey
     gnome-screenshot
+    network-manager-gnome
   ];
   programs.firefox.enable=true;
   programs.wireshark.enable = true;
