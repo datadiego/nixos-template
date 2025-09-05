@@ -28,6 +28,7 @@ in
 	  pkgs.git
 	  pkgs.gh
     pkgs.git-credential-manager
+    pkgs.docker
   	pkgs.linode-cli
   	pkgs.bitwarden-cli
   	pkgs.bitwarden-desktop
